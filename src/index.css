@@ -1,0 +1,68 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+html {
+  height: 100%;  
+}
+
+#root {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  margin: 0 auto;
+  width: 100%;
+}
+.quote {
+  margin: 20px;  
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 15px;
+  font-weight: bold;
+  color: white
+}
+.quote-text {   
+  font-size: 2.5em;  
+}
+.author {
+  font-size: 1.5em;
+}
+.quote:before {
+  content: '.';
+  font-size: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('https://picsum.photos/1366/768?random');
+  background-position: center;
+  background-size: cover;
+  z-index: -100;
+}
+
+.change-btn {  
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-size: 100px;
+}
+
+.change-btn img {
+  width: 100px;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+.control-btn {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.loading {
+  font-size: 80px;
+}
