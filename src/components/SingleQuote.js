@@ -64,7 +64,7 @@ class SingleQuote extends React.Component {
             <p className='loading'>Loading...</p>
           }
           { loaded &&
-            <Quote data={this.state.data} />          
+            <Quote data={this.state.data} />            
           } 
           <div className='control-btn'>
             <div className='container'>
@@ -74,8 +74,8 @@ class SingleQuote extends React.Component {
               <button className='change-btn' onClick={this.handleClick}>
                 <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjQgNTEuNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEuNCA1MS40OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCI+CjxnPgoJPHBhdGggZD0iTTEuNywyNS4yYzAuNTUzLDAsMS0wLjQ0NywxLTFjMC02LjA2NSw0LjkzNS0xMSwxMS0xMWgyNHY4Ljk2NEw1MS40LDEyLjJMMzcuNywyLjIzNlYxMS4yaC0yNGMtNy4xNjgsMC0xMyw1LjgzMi0xMywxMyAgIEMwLjcsMjQuNzUzLDEuMTQ3LDI1LjIsMS43LDI1LjJ6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8cGF0aCBkPSJNNDkuNywyNi4yYy0wLjU1MywwLTEsMC40NDctMSwxYzAsNi4wNjUtNC45MzUsMTEtMTEsMTFoLTI0di04Ljk2NEwwLDM5LjJsMTMuNyw5Ljk2NFY0MC4yaDI0YzcuMTY4LDAsMTMtNS44MzIsMTMtMTMgICBDNTAuNywyNi42NDcsNTAuMjUzLDI2LjIsNDkuNywyNi4yeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
               </button>
-              <button onClick={this.addQuote}>
-                Add Quote
+              <button className='change-btn' onClick={this.addQuote}>
+                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSI+Cgk8Zz4KCQk8cGF0aCBkPSJNNDg5LjY2NywyMzMuNjY3SDI3Ni4zMzNWMjAuMzMzQzI3Ni4zMzMsOC41NTEsMjY2Ljc4Mi0xLDI1NS0xcy0yMS4zMzMsOS41NTEtMjEuMzMzLDIxLjMzM3YyMTMuMzMzSDIwLjMzMyAgICBDOC41NTEsMjMzLjY2Ny0xLDI0My4yMTgtMSwyNTVzOS41NTEsMjEuMzMzLDIxLjMzMywyMS4zMzNoMjEzLjMzM3YyMTMuMzMzYzAsMTEuNzgyLDkuNTUxLDIxLjMzMywyMS4zMzMsMjEuMzMzICAgIHMyMS4zMzMtOS41NTEsMjEuMzMzLTIxLjMzM1YyNzYuMzMzaDIxMy4zMzNjMTEuNzgyLDAsMjEuMzMzLTkuNTUxLDIxLjMzMy0yMS4zMzNTNTAxLjQ0OSwyMzMuNjY3LDQ4OS42NjcsMjMzLjY2N3oiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
               </button>
             </div>
           </div>          

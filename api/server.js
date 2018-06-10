@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
+const objectId = require('mongodb').ObjectID;
 
 const jsonParser = bodyParser.json();
 
@@ -29,8 +30,7 @@ app.get('/:lang', (req, res) => {
 })
 
 app.get('/api/quotes', (req, res) => {
-    MongoClient.connect(url, (err, client) => {
-        if(!req.body) return res.sendStatus(400);
+    MongoClient.connect(url, (err, client) => {        
         
         client.db('quotesdb').collection('quotes').find({}).toArray((err, quotes) => {
             if(err) return res.send('something go wrong')
@@ -59,7 +59,18 @@ app.post('/api/add', jsonParser, (req, res) => {
     })
 })
 
-
+app.delete('/api/delete/:id', (req, res) => {
+    const id = new objectId(req.params.id);
+    MongoClient.connect(url, (err, client) => {        
+        
+        client.db('quotesdb').collection('quotes').findOneAndDelete({_id: id}, (err, result) => {
+            if(err) console.log(err);
+            console.log(result);
+            res.send(`Quote ${id} removed from db`);
+            client.close()
+        })
+    })
+})
 
 
 app.listen(PORT, (err) => {

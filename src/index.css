@@ -46,11 +46,11 @@ html {
   border: none;
   cursor: pointer;
   color: black;
-  font-size: 100px;
+  font-size: 95px;
 }
 
 .change-btn img {
-  width: 100px;
+  width: 70px;
 }
 
 button:active, button:focus {
@@ -63,6 +63,28 @@ button:active, button:focus {
   top: 0;
 }
 
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+}
+
 .loading {
   font-size: 80px;
+}
+
+.nav-block {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  z-index: 2;
+}
+
+.nav-btn {
+  display: block;
+  padding: 10px;
+}
+.nav-btn img {
+  width: 50px;
 }
