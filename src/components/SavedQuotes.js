@@ -45,7 +45,6 @@ class SavedQuotes extends React.Component {
         const loaded = this.state.isLoaded;
         return (
             <div>
-                <h1>Saved Quotes</h1>
                 {!loaded && 
                     <p className='loading'>Loading...</p>
                 }

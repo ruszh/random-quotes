@@ -66,7 +66,7 @@ app.delete('/api/delete/:id', (req, res) => {
         client.db('quotesdb').collection('quotes').findOneAndDelete({_id: id}, (err, result) => {
             if(err) console.log(err);
             console.log(result);
-            res.send(`Quote ${id} removed from db`);
+            res.send(`Quote id: ${id} removed from db`);
             client.close()
         })
     })
